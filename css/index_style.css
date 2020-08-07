@@ -73,6 +73,7 @@ h6 {
   font-size: 30px;
   bottom: 30px;
   right: 30px;
+  z-index: 999999999999999999999999999999999999;
   display: none;
 }
 .tool-color {
@@ -85,7 +86,7 @@ h6 {
 .tool-box {
   position: fixed;
   left: 0;
-  top: 45%;
+  top: 60%;
   z-index: 499999977777;
 }
 .tool-box .iconfontt {
@@ -105,9 +106,19 @@ h6 {
 }
 .head::before {
   content: "I`m A Photographer.";
-  animation: mymovehead 6.5s infinite;
+  animation: mymovehead 8.5s infinite;
   color: white;
+  font-size: 50px;
   -webkit-animation: mymovehead 8.5s infinite;
+}
+@media only screen and (max-width: 600px) {
+  .head::before {
+    content: "I`m A Photographer.";
+    animation: mymovehead 8.5s infinite;
+    color: white;
+    font-size: 25px;
+    -webkit-animation: mymovehead 8.5s infinite;
+  }
 }
 @keyframes mymovehead {
   0% {
@@ -234,11 +245,12 @@ h6 {
     content: "I`m A Photographer|";
   }
 }
-
+#home button {
+  margin-bottom: 100px;
+}
 .scrol {
   height: 50px;
-  bottom: 30px;
-  left: 49%;
+
   width: 25px;
   border: 2px solid white;
   background-color: transparent;
